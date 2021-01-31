@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import NavBar from "./common/navBar";
+import Routes from "./components/Routes";
+import auth from "./services/authService";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {};
+
+  componentDidMount() {
+    const user = auth.getCurrentUser();
+    this.setState({ user });
+    console.log(user)
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar user={this.state.user} />
+        <main className="container">
+          <Routes user={this.state.user} />
+        </main>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;

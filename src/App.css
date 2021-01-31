@@ -7,6 +7,59 @@
   pointer-events: none;
 }
 
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper div {
+  margin-top: 0px;
+}
+
+/* .project-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#submit-btn {
+  margin: 20px auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.S20 {
+  width: 20vw;
+}
+
+.S30 {
+  width: 30vw;
+  margin-left: 20px;
+}
+
+.S60 {
+  width: 55vw;
+  margin-right: 20px;
+}
+
+.inline-form {
+  display: flex;
+}
+
+.inline-form div,
+button {
+  margin-right: 20px;
+}
+
+.login-form {
+  width: 300px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
